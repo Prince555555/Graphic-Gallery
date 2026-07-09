@@ -487,9 +487,24 @@
     .design-grid{grid-template-columns:1fr;}
     .head-row{flex-direction:column;align-items:flex-start;gap:20px;margin-bottom:32px;}
     .view-more .btn{width:100%;}
-    .clients-marquee{-webkit-mask-image:none;mask-image:none;}
-    .marquee-track{animation:none;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;}
-    .client-logo{scroll-snap-align:start;flex-shrink:0;}
+   .clients-marquee{
+    overflow:hidden;
+    -webkit-mask-image:none;
+    mask-image:none;
+}
+
+.marquee-track{
+    display:flex;
+    gap:16px;
+    width:max-content;
+    animation:scroll-left 22s linear infinite;
+}
+
+.client-logo{
+    min-width:150px;
+    height:85px;
+    flex-shrink:0;
+}
     .cta-section{padding:70px 0;}
     .cta-inner .btn{width:100%;}
     .footer-contact{gap:28px;}
